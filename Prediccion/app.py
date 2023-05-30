@@ -86,7 +86,7 @@ def index():
         return redirect('./templates/resultado.html', pais=pais, medallas=medallas, confianza=confianza))
     return render_template('./templates/home.html')
 
-@app.route('/resultado')
+@app.route('./templates/resultado.html')
 def resultado():
             pais = request.args.get('pais')
 
