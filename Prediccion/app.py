@@ -83,10 +83,10 @@ def index():
         RSULTADOS = grid_svr.predict(new_data_scaled) 
         medallas = RSULTADOS[0]
 
-        return redirect('./templates/resultado.html', pais=pais, medallas=medallas, confianza=confianza))
-    return render_template('./templates/home.html')
+        return redirect('./resultado.html', pais=pais, medallas=medallas, confianza=confianza))
+    return render_template('./home.html')
 
-@app.route('./templates/resultado.html')
+@app.route('./resultado.html')
 def resultado():
             pais = request.args.get('pais')
 
@@ -110,7 +110,7 @@ def resultado():
             RSULTADOS = grid_svr.predict(new_data_scaled) 
             medallas = RSULTADOS[0]
 
-            return render_template('./templates/resultado.html', pais=pais, medallas=medallas, confianza=confianza)
+            return render_template('./resultado.html', pais=pais, medallas=medallas, confianza=confianza)
 
 if __name__ == '__main__':
     app.run()
