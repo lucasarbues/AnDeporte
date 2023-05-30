@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}">
+
+</head>
+<body>
+    <h1>Resultados:</h1>
+    <p>Pais: {{ pais }}</p>
+    <p>Prediccion Medallas: {{ medallas }}</p>
+    <p>Nivel Confianza: {{ confianza }}</p>
+    <form method="get" action="/">
+        <input type="submit" value="Cargar otros datos">
+    </form>
+</body>
+</html>
