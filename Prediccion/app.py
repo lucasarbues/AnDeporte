@@ -14,7 +14,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.svm import SVR
 from sklearn.model_selection import GridSearchCV
 
-df_original =pd.read_csv('./MedalTable.csv',sep=';')
+df_original =pd.read_csv('./MedalTable (1).csv',sep=';')
 
 df_original.loc["1247"] = [0, 1, 2, 3, 2020, 0, 12, 'ARG', 2016, 2012, 'Total Geral', 3, 4, 1, 4, 0, 0, 1, 1, 1020]
 df=df_original[(df_original["FlagY1"]==1) & (df_original["FlagY2"]==1)]
